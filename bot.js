@@ -98,7 +98,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content.toLowerCase() === prefix + 'yardım') {
-     msg.channel.sendMessage('**Sunucudaki komutlar ```css *nasılsın *başvuru *yaz *avatar ve sa komutlarıdır**```')
+     msg.channel.sendMessage('**Sunucudaki komutlar *** *nasılsın *başvuru *yaz *avatar *si *sil *reboot *unban ve sa komutlarıdır****```')
 }
 });
 
