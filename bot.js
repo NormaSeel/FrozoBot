@@ -107,12 +107,6 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-  if (message.content.toLowerCase() === prefix + "avatar") {
-    message.channel.send(message.author.avatarURL);
-  }
-});
-
-client.on('message', message => {
 
   if (!message.guild) return;
   if (message.content.startsWith('*at')) {
