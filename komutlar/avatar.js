@@ -4,6 +4,7 @@ const Discord = require('discord.js');
 exports.run = function(client, message) {
 
    const embed = new Discord.RichEmbed()
+    .setColor('RANDOM')
     .setAuthor(message.author.tag)
     .setImage(message.author.avatarURL)
 
