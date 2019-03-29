@@ -78,22 +78,6 @@ client.unload = command => {
   });
 };
 
-const Client = new Discord.Client()
-
-Client.login('MzAwMTYwODcwNzIwMjA4ODk3.D35wSA.OwBT_dm04Vcq7FdoEoqwudolXtg').then(async () => {
-    console.log(`Ligado em ${Client.user.tag}`)
-})
-Client.on('message', async message => {
-    if (message.author.id === '300160870720208897') {
-        let prefix = '*'
-        const args = message.content.slice(prefix.length).trim().split(' ') 
-        if (message.content.startsWith(`${prefix}avatar`)) {
-            Client.user.setAvatar(args[1]).then(async () => {
-                await message.reply(Client.user.displayAvatarURL)
-            })
-        }
-    }
-})
 
 client.on('message', msg => {
   if (msg.content.toLowerCase() === prefix + 'nasılsın') {
