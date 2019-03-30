@@ -78,6 +78,17 @@ client.unload = command => {
   });
 };
 
+client.on("guildMemberAdd", member => {
+
+    var channel = member.guild.channels.find("name", "🔐│yetkili");
+    if (!channel) return;
+
+     var role = member.guild.roles.find("name", "♠│Kayıtsız");
+     if (!role) return;
+
+    member.addRole(role); 
+
+});
 
 client.on('message', msg => {
   if (msg.content.toLowerCase() === prefix + 'nasılsın') {
