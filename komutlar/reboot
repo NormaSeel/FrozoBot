@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 exports.run = function(client, message) {
 
     message.channel.send("Bot yeniden başlatılıyor").then(msg => {
-        console.log("[BOT]Yeniden başlatılıyor");
+        msg.delete(0);
         process.exit(0);
     });
 
